@@ -1,0 +1,54 @@
+/* header.css */
+
+
+
+header {
+    background-color: #333; /* Dark background for the header */
+    padding: 10px 0; /* Padding for the header */
+}
+
+.nav-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Maximum width for the nav content */
+    margin: 0 auto; /* Center the nav content */
+    display: flex;
+    justify-content: space-between; /* Space out the nav items */
+    align-items: center;
+    padding: 0 20px; /* Horizontal padding for the nav content */
+}
+
+nav ul {
+    list-style: none; /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display items in a row */
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between nav items */
+}
+
+nav ul li a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px; /* Font size for links */
+}
+
+nav ul li a:hover {
+    color: #00aaff; /* Change link color on hover */
+}
+
+.right {
+    margin-left: auto; /* Push items to the right */
+}
+
+.hide-on-med-and-down {
+    display: flex; /* Ensure items are flexed */
+}
+
+.container {
+    max-width: 1200px; /* Maximum width for the main content */
+    margin: 20px auto; /* Center the main content */
+    padding: 0 20px; /* Horizontal padding for the main content */
+    height: 81%;
+}

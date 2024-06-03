@@ -1,0 +1,131 @@
+/* Root Variables for Consistency */
+:root {
+    --main-bg-color: #e0f7fa;
+    --sidebar-width: 30%;
+    --content-width: 70%;
+    --bars-bg-color: #b0bec5;
+    --padding: 2em;
+    --margin: 1em;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    --nav-bg-color: #00796b;
+    --nav-link-color: #ffffff;
+    --nav-link-hover-bg-color: #004d40;
+    --nav-link-hover-color: #ffffff;
+    --nav-padding: 1em;
+    --nav-link-padding: 0.75em 1.5em;
+}
+
+/* Main Content Styling */
+.main {
+    width: 50%;
+    margin: auto;
+    background-color: var(--main-bg-color);
+    padding: var(--padding);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+
+.main:hover {
+    background-color: #b2ebf2;
+}
+
+/* Image Styling */
+img {
+    width: 50%;
+    display: block;
+    margin: auto;
+    border-radius: var(--border-radius);
+    transition: transform 0.3s;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--margin);
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: var(--sidebar-width);
+    padding: var(--padding);
+    background-color: var(--main-bg-color);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
+/* Bars Styling */
+.bars {
+    width: var(--content-width);
+    background-color: var(--bars-bg-color);
+    margin: var(--margin);
+    text-align: center;
+    padding: 1em;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s;
+}
+
+.bars:hover {
+    background-color: #90a4ae;
+}
+
+/* Navigation Bar Styling */
+.topnav {
+    background-color: var(--nav-bg-color);
+    overflow: hidden;
+    padding: var(--nav-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+/* Navigation Link Styling */
+.nav_link {
+    color: var(--nav-link-color);
+    text-align: center;
+    padding: var(--nav-link-padding);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav_link:hover {
+    
+    color:  var(--nav-link-hover-bg-color);
+   
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .main {
+        width: 90%;
+        padding: 2em;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .sidebar, .bars {
+        width: 100%;
+    }
+
+    .topnav {
+        flex-direction: column;
+    }
+
+    .nav_link {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: var(--nav-link-padding);
+    }
+}

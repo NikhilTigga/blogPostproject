@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+   <link rel="stylesheet" href="/styles/blog.css">
+   <div class="blogcontent">
+      <div class="blog">
+         <h1>blog post</h1>
+         <% if(locals.posts && locals.posts.length>0){%>
+
+
+            <% posts.forEach(post=>{ %>
+
+
+               <ul>
+                  <li>
+                    <a class="blogpost" href="/posts/view/<%=post.id%>"> <%=post.topic %></a> 
+                    <a class="edit" href="/posts/edit/<%=post.id%>">Edit</a>
+                    <form action="/posts/delete/<%=post.id %>" method="post">
+                     <input type="hidden" name="delete" value="Delete">
+                     <button type="submit"> Delete</button>
+                  </form>
+                  </li>
+               </ul>
+               <%})%>
+
+                  <%}else{%>
+                     <h1> Sorry, No post available</h1>
+
+                     <%}%>
+      </div>
+   </div>
+   <%-include("partials/footer.ejs")%>

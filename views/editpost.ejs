@@ -1,0 +1,10 @@
+<%-include("partials/header.ejs")%>
+    <h1>hello</h1>
+    <form action="/post/edit/<%=post.id%>" method="post">
+        <input type="text" name ="topic" value="<%=post.topic%>" required><br>
+        <input type="text" name ="author" value="<%=post.author%>" required><br>
+        <textarea name="post" id="post1" rows="20" cols="79" required> <%=post.content%></textarea><br>
+        <input type="submit" value="Edit">
+    </form>
+    <%- include("partials/footer.ejs") %>
+   
